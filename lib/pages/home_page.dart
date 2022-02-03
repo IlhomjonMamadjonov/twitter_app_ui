@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:twitter_app_ui/models/tweets.dart';
@@ -208,19 +209,17 @@ class _TwitterUIState extends State<TwitterUI> {
           height: 32,
           child: Image.asset("assets/images/appbar/logo.png"),
         ),
-        leading: Container(
-          margin: EdgeInsets.all(10),
+        leading: Badge(
+          padding:  EdgeInsets.all(1.5),
+          position:  BadgePosition(top: 10, end: 6),
+          elevation: 0,
+          badgeColor: Colors.white,
+          badgeContent: CircleAvatar(
+            radius: 4,
+            backgroundColor: Colors.blue,
+          ),
           child: CircleAvatar(
-            backgroundColor: Colors.white,
-            radius: 30,
-            child: ClipOval(
-              child: Image.asset(
-                "assets/images/profileImages/img1.jpg",
-                fit: BoxFit.cover,
-                width: 60.0,
-                height: 60.0,
-              ),
-            ),
+            backgroundImage: AssetImage("assets/images/profileImages/img1.jpg"),
           ),
         ),
         actions: [
