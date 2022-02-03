@@ -266,6 +266,7 @@ class _TwitterUIState extends State<TwitterUI> {
       ),
       body: Container(
         child: ListView.builder(
+          physics: BouncingScrollPhysics(),
             itemCount: items.length,
             shrinkWrap: true,
             itemBuilder: (Buildcontext, int index) {
